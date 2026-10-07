@@ -36,10 +36,9 @@ const getVisiblePeople = (searchParams: URLSearchParams, people: Person[]) => {
 
     visiblePeople = visiblePeople.filter(person => {
       return (
-        //person.name.toLowerCase().includes(normalizedQuery) ||
-        //person.motherName?.toLowerCase().includes(normalizedQuery) === true ||
-        //person.fatherName?.toLowerCase().includes(normalizedQuery) === true
-        person.name.toLowerCase().includes(normalizedQuery)
+        person.name.toLowerCase().includes(normalizedQuery) ||
+        person.motherName?.toLowerCase().includes(normalizedQuery) === true ||
+        person.fatherName?.toLowerCase().includes(normalizedQuery) === true
       );
     });
   }
